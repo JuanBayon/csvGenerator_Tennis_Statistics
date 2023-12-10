@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private var button: Button? = null
+    private var exit: Button? = null
     private lateinit var binding: ActivityMainBinding
     private var csvName: String = "entries.csv"
     private var successText = "Done! CSV is saved in files"
@@ -23,14 +24,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         button = findViewById(R.id.button)
-        button!!.setOnClickListener{
+        button!!.setOnClickListener {
             val firebaseData = FirebaseData()
-
-            //MainScope().launch {
             firebaseData.getCSV(applicationContext, csvName)
-            //}
-
             Toast.makeText(this, successText, Toast.LENGTH_SHORT).show()
+        }
+
+        exit = findViewById(R.id.exit)
+        exit!!.setOnClickListener {
+            finish()
         }
 
     }
