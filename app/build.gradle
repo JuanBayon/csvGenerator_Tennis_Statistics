@@ -5,17 +5,16 @@ plugins {
 }
 
 android {
-    namespace 'com.uoc.csvgenerator'
+    namespace 'com.uoc.tennis'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.uoc.csvgenerator"
+        applicationId "com.uoc.tennis"
         minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -24,16 +23,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    buildFeatures {
+        viewBinding true
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-    viewBinding {
-        enabled = true
-    }
+
 }
 
 dependencies {
@@ -47,7 +40,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.3.0'
     implementation 'androidx.wear:wear:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
@@ -57,12 +50,17 @@ dependencies {
     implementation 'androidx.activity:activity-ktx:1.7.2'
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
-    implementation 'androidx.test:monitor:1.5.0'
-    implementation 'androidx.test.ext:junit-ktx:1.1.5'
-    testImplementation 'junit:junit:4.13.2'
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
-    implementation 'com.google.code.gson:gson:2.8.8'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2"
+
+    /*// Define dependency on core of H2O
+    api "ai.h2o:h2o-core:3.30.0.7"
+    // Define dependency on H2O algorithm
+    api "ai.h2o:h2o-algos:3.30.0.7"
+    // Demands web support
+    api "ai.h2o:h2o-web:3.30.0.7"
+    // Contains H2O entry points
+    api "ai.h2o:h2o-app:3.30.0.7"*/
+    implementation files('libs/h2o-genmodel.jar')
+    implementation 'org.apache.commons:commons-math:2.2'
+
 
 }
