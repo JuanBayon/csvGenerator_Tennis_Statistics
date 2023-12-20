@@ -7,9 +7,66 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:779983162783:android:32c8b6f3b3809fa06301aa",
+        "android_client_info": {
+          "package_name": "com.uoc.csvgenerator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtJM9h0Il_0k3ekg8TibfNdAGY2QLi0CE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779983162783:android:db3bf34163072f846301aa",
+        "android_client_info": {
+          "package_name": "com.uoc.datatocsv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtJM9h0Il_0k3ekg8TibfNdAGY2QLi0CE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:779983162783:android:298ce1df548597856301aa",
         "android_client_info": {
           "package_name": "com.uoc.tennis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtJM9h0Il_0k3ekg8TibfNdAGY2QLi0CE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779983162783:android:46002e9057d53ea06301aa",
+        "android_client_info": {
+          "package_name": "com.uoc.tennisv3"
         }
       },
       "oauth_client": [],
